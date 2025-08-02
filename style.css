@@ -1,0 +1,150 @@
+:root {
+    --sidebar-width: 250px;
+    --header-height: 60px;
+    --footer-height: 50px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--header-height));
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    transition: all 0.3s;
+    overflow-y: auto;
+    z-index: 900;
+}
+
+.sidebar.active {
+    left: calc(-1 * var(--sidebar-width));
+}
+
+.sidebar-nav {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav .nav-item {
+    width: 100%;
+}
+
+.sidebar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav .nav-link i {
+    width: 20px;
+    text-align: center;
+}
+
+.content {
+    margin-left: var(--sidebar-width);
+    margin-top: var(--header-height);
+    padding: 20px;
+    flex: 1;
+    transition: all 0.3s;
+}
+
+.content.active {
+    margin-left: 0;
+}
+
+footer {
+    height: var(--footer-height);
+    margin-left: var(--sidebar-width);
+    transition: all 0.3s;
+}
+
+footer.active {
+    margin-left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .sidebar {
+        left: calc(-1 * var(--sidebar-width));
+    }
+    
+    .sidebar.active {
+        left: 0;
+    }
+    
+    .content,
+    footer {
+        margin-left: 0;
+    }
+    
+    .content.active {
+        margin-left: var(--sidebar-width);
+    }
+    
+    footer.active {
+        margin-left: var(--sidebar-width);
+    }
+}
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+}
+
+/* Table styling */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* Button styling */
+.btn-primary {
+    padding: 8px 16px;
+    border-radius: 6px;
+}
