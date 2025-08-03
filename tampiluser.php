@@ -20,6 +20,7 @@ $result = $conn->query($sql); ?>
                         <th>Name</th>
                         <th>Gender</th>
                         <th>Title</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,11 +28,13 @@ $result = $conn->query($sql); ?>
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
                             echo "<tr>
-                            <td>" . $row["userid"]. "</td>
-                            <td>" . $row["badgenumber"]. "</td>
-                            <td>" . $row["name"]. "</td>
-                            <td>" . $row["gender"]. "</td>
-                            <td>" . $row["title"]. "</td>
+                            <td>" . $row["userid"] . "</td>
+                            <td>" . $row["badgenumber"] . "</td>
+                            <td>" . $row["name"] . "</td>
+                            <td>" . $row["gender"] . "</td>
+                            <td>" . $row["title"] . "</td>
+                            <td><a href='delete_user.php?userid=" . $row["userid"] . "' onclick='return confirm(\"Hapus data user ini?\")'>Hapus</a></td>
+                            
                             </tr>";
                         }
                     } else {

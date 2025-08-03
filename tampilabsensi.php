@@ -12,7 +12,7 @@ include 'includes/sidebar.php';
 <body>
  <div class="content">
     <div class="container-fluid"><h2> absensi_fp 
-        <h2 class="mb-4"><a href="import_absensi_fp.php"> Import Data Absensi</a> || <a href="attendance_filter.php"> Filter Data Absensi</a></h2>
+        <h2 class="mb-4"><a href="import_absensi_fp.php"> Import Data Absensi</a> || <a href="attendance_filter.php"> Filter Data Absensi</a> | <a href="absensilive.php"> Absensi Live</a></h2>
     <table id="absensi_fp" class="display" style="width:100%">
         <thead>
             <tr>

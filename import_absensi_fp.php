@@ -1,3 +1,13 @@
+<?php 
+$pageTitle = "Dashboard";
+$currentPage = "dashboard";
+include 'includes/header.php'; 
+include 'includes/sidebar.php';
+?>
+
+<div class="content">
+    <div class="container-fluid">
+        <h2 class="mb-4">Dashboard</h2>
 <?php
 require 'vendor/autoload.php';
 require 'config/database.php';
@@ -48,3 +58,6 @@ if (isset($_FILES['file_excel']['tmp_name'])) {
     <button type="submit">Import</button>
 </form>
 
+    </div>
+</div>
+<?php include 'includes/footer.php'; ?>

@@ -16,6 +16,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="kalenderkerja.php" class="nav-link <?php echo ($currentPage == 'work_schedules') ? 'active' : ''; ?>">
+                            <i class="fas fa-calendar-alt me-2"></i> Kalender kerja
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="tampilabsensi.php" class="nav-link <?php echo ($currentPage == 'attendance') ? 'active' : ''; ?>">
                             <i class="fas fa-calendar-check me-2"></i> Attendance
                         </a>

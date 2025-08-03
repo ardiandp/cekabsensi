@@ -20,7 +20,7 @@ $query = "
         END AS status_pulang
     FROM kalenderkerja k
     JOIN userinfo u ON k.karyawan = u.userid
-    JOIN shift s ON k.shift = s.id
+    JOIN shift s ON k.shift = s.nama
     LEFT JOIN absensi a ON a.USERID = u.userid AND DATE(a.CHECKTIME) = k.tanggal
     GROUP BY u.name, k.tanggal, s.nama, s.masuk, s.pulang
     ORDER BY k.tanggal DESC

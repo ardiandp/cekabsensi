@@ -1,8 +1,8 @@
 <?php 
 $pageTitle = "Dashboard";
 $currentPage = "dashboard";
-//include 'includes/header.php'; 
-//include 'includes/sidebar.php';
+include 'includes/header.php'; 
+include 'includes/sidebar.php';
 require 'config/database.php';
 
 // Fungsi untuk nama hari
@@ -85,7 +85,7 @@ $sql = "
     $whereSql
     GROUP BY u.userid, DATE(a.checktime)
     ORDER BY tanggal DESC, u.userid
-    LIMIT 30
+    LIMIT 300
 ";
 $result = $conn->query($sql);
 
